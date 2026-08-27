@@ -35,6 +35,5 @@
     cout << "arr_int_example: " << sizeof(arr) << endl;
     cout << "arr[0]: " << arr[0] << endl;
     cout << "arr[1]: " << arr[1] << endl;
-    cout << "arr[10]: " << arr[10] << endl; // index 0 - 9, 10 is out of bound
-    return 0;
+  return 0;
  }
