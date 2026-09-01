@@ -27,8 +27,19 @@ void readFile(string filename) {
     inputFile.close();
     return;
 }
+
+/**
+ * @brief prompts the user to give a file to read
+ * 
+ */
+void promptFile(){
+    cout << "file to read?\n";
+    string myFile = "";
+    cin >> myFile;
+    readFile(myFile);
+}
 int main()
 {
-    readFile("2310_F26_Rosters.csv");
-    readFile("Questions.csv");
+    promptFile();
+
 }
