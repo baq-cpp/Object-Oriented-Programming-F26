@@ -53,8 +53,9 @@ void printVec(vector<string> v){
 int main()
 {
     vector<string> roster;
-    promptFile(roster);
+    vector<string> qBank;
+    readFile("2310_F26_Rosters.csv", roster);
+    readFile("Questions.csv", qBank);
     printVec(roster);
-
-
+    printVec(qBank);
 }
