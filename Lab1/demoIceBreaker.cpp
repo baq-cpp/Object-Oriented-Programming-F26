@@ -44,14 +44,17 @@ void ranGen(){
     int randomNumber = rand() % 6;  // 0 through 5
     cout << randomNumber << endl;
 }
+
+void printVec(vector<string> v){
+    for(int i = 0; i < v.size(); i++){
+        cout << v[i] << endl;
+    }
+}
 int main()
 {
-    vector<string> qBank;
-    promptFile(qBank);
-
-    for(int i = 0; i < qBank.size(); i++){
-        cout << qBank[i] << endl;
-    }
+    vector<string> roster;
+    promptFile(roster);
+    printVec(roster);
 
 
 }
