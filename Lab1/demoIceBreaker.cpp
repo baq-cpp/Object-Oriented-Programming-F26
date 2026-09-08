@@ -74,15 +74,15 @@ void printVec(vector<string> v){
 
 int main()
 {
-    // vector<string> roster;
-    // vector<string> qBank;
-    // readFile("2310_F26_Rosters.csv", roster);
-    // readFile("Questions.csv", qBank);
+    vector<string> roster;
+    vector<string> qBank;
+    readFile("2310_F26_Rosters.csv", roster);
+    readFile("Questions.csv", qBank);
     // printVec(roster);
     // printVec(qBank);
 
     // cout << "Size of roster: " << roster.size() << endl; 
     // cout << "Size of qBank: " << qBank.size() << endl;
-
+    writeFile("Student_question_bank.csv",roster, qBank);
 
 }
