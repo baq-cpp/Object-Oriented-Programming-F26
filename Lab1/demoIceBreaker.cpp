@@ -77,4 +77,12 @@ int main()
         cout << "Error: Could not create data.csv" << endl;
         return 1;
     }
+
+        // Column headings
+    outputFile << "Column1,Column2" << endl;
+
+    // User-provided values
+    outputFile << firstColumn << "," << secondColumn << endl;
+
+    outputFile.close();
 }
