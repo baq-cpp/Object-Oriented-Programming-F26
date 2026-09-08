@@ -27,6 +27,26 @@ void readFile(string filename, vector<string> & vec) {
     inputFile.close();
     return;
 }
+/**
+ * @brief writes to filename with the first column from v0, second column from v1
+ * 
+ * @param filename: string
+ * @param v0: vector<string> (for students names)
+ * @param v1: vector<string> (for questions)
+ */
+void writeFile(string filename, vector<string> v0, vector<string> v1){
+
+    ofstream outputFile(filename);
+     if (!outputFile) {
+        cout << "Error: Could not create data.csv" << endl;
+    }
+
+    // User-provided values
+    outputFile << v0[0] << "," << v1[0] << endl;
+
+    outputFile.close();
+
+}
 
 /**
  * @brief prompts the user to give a file to read
@@ -50,6 +70,8 @@ void printVec(vector<string> v){
         cout << v[i] << endl;
     }
 }
+
+
 int main()
 {
     // vector<string> roster;
@@ -62,27 +84,5 @@ int main()
     // cout << "Size of roster: " << roster.size() << endl; 
     // cout << "Size of qBank: " << qBank.size() << endl;
 
-        //output file
-    string firstColumn;
-    string secondColumn;
 
-    cout << "Enter the first string: ";
-    getline(cin, firstColumn);
-
-    cout << "Enter the second string: ";
-    getline(cin, secondColumn);
-
-    ofstream outputFile("Student_question_bank.csv");
-     if (!outputFile) {
-        cout << "Error: Could not create data.csv" << endl;
-        return 1;
-    }
-
-        // Column headings
-    outputFile << "Column1,Column2" << endl;
-
-    // User-provided values
-    outputFile << firstColumn << "," << secondColumn << endl;
-
-    outputFile.close();
 }
