@@ -3,6 +3,13 @@
 
 using namespace std;
 
+int ranGen(){
+    srand(time(nullptr));
+    int randomNumber = rand() % 6;  // 0 through 5
+    // cout << randomNumber << endl;
+    return randomNumber;
+}
+
 /**
  * @brief reads out the contents of the filename
  * 
@@ -43,7 +50,7 @@ void writeFile(string filename, vector<string> v0, vector<string> v1){
 
     // User-provided values
     for(int i = 0; i < v0.size(); i++){
-        outputFile << v0[i] << "," << v1[0] << endl;
+        outputFile << v0[i] << "," << v1[ranGen()] << endl;
     }
     outputFile.close();
 
@@ -60,11 +67,7 @@ void promptFile(vector<string> & v){
     readFile(myFile, v);
 }
 
-void ranGen(){
-    srand(time(nullptr));
-    int randomNumber = rand() % 6;  // 0 through 5
-    cout << randomNumber << endl;
-}
+
 
 void printVec(vector<string> v){
     for(int i = 0; i < v.size(); i++){
