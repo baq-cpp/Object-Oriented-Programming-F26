@@ -4,7 +4,6 @@
 using namespace std;
 
 int ranGen(){
-    srand(time(nullptr));
     int randomNumber = rand() % 6;  // 0 through 5
     // cout << randomNumber << endl;
     return randomNumber;
@@ -78,6 +77,7 @@ void printVec(vector<string> v){
 
 int main()
 {
+    srand(time(nullptr));
     vector<string> roster;
     vector<string> qBank;
     readFile("2310_F26_Rosters.csv", roster);
@@ -87,6 +87,7 @@ int main()
 
     // cout << "Size of roster: " << roster.size() << endl; 
     // cout << "Size of qBank: " << qBank.size() << endl;
+
     writeFile("Student_question_bank.csv",roster, qBank);
 
 }
