@@ -42,8 +42,9 @@ void writeFile(string filename, vector<string> v0, vector<string> v1){
     }
 
     // User-provided values
-    outputFile << v0[0] << "," << v1[0] << endl;
-
+    for(int i = 0; i < v0.size(); i++){
+        outputFile << v0[i] << "," << v1[0] << endl;
+    }
     outputFile.close();
 
 }
