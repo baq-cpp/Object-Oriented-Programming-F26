@@ -80,8 +80,8 @@ void readFile(string filename, vector<string> & vec) {
  * succeeded or not
  * 
  * TO DO:
- * ​​​Pass vectors by const reference (const vector<string> & v0, const vector<string> & v1)
- * as opposed to pass by value(vector<string> v0, vector<string> v1). 
+ * ​​Use pass by const reference (const vector<string> & v0, const vector<string> & v1)
+ * as opposed to pass by value (vector<string> v0, vector<string> v1). 
  * 
  * What is the differennce between:
  * -  pass by reference (e.g. vector<string> & v0),
@@ -95,7 +95,8 @@ void writeFile(string filename, vector<string> v0, vector<string> v1){
         cout << "Error: Could not create data.csv" << endl;
     }
 
-    // User-provided values
+    // write under the structure:
+    // Student_Name, Question_#
     for(int i = 0; i < v0.size(); i++){
         outputFile << v0[i] << "," << v1[ranGen()] << endl;
     }
