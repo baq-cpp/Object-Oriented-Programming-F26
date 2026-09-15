@@ -22,6 +22,20 @@ int main(){
     printf("After -------------------------\n");
     printMemVec(vTest);
 
+        //change the value
+    vTest.pop_back();
+    vTest.pop_back();
+    printf("After -------------------------\n");
+    printMemVec(vTest);
+
+            //change the value
+    vTest.push_back(300);
+    vTest.push_back(301);
+    vTest.push_back(302);
+    printf("After -------------------------\n");
+    printMemVec(vTest);
+
+
 }
 
 void printMemVec(vector<int> v){
