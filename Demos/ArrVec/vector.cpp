@@ -7,19 +7,19 @@ void printMemVec(vector<int> v);
 void incVecBy10(vector<int> & v);
 
 int main(){
-    const int SIZE = 5;
-    int arr[SIZE];
-    for(int i = 0; i < SIZE; i++){
-        arr[i] = 100 + i;
+    vector<int> vTest;
+    // vector<int> vTest{100,101,102,103,104};
+    for(int i = 0; i < vTest.size(); i++){
+        vTest.push_back(100 + i);
     }
 
     printf("Before -------------------------\n");
-    printMemArr(arr,SIZE);
+    printMemVec(vTest);
 
     //change the value
-    incArrBy10(arr,SIZE);
+    incVecBy10(vTest);
     printf("After -------------------------\n");
-    printMemArr(arr,SIZE);
+    printMemVec(vTest);
 
 }
 
