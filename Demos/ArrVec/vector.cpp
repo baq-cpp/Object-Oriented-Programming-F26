@@ -7,9 +7,10 @@ void printMemVec(vector<int> v);
 void incVecBy10(vector<int> & v);
 
 int main(){
+    //vector<int> vTest{100,101,102,103,104};
     vector<int> vTest;
-    // vector<int> vTest{100,101,102,103,104};
-    for(int i = 0; i < vTest.size(); i++){
+    const int SIZE = 5;
+    for(int i = 0; i < SIZE; i++){
         vTest.push_back(100 + i);
     }
 
