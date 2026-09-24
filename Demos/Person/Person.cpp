@@ -33,4 +33,34 @@ Person::Person(){
     lives_in_IE = ~lives_in_IE;
  }
  
- string getName() const
+ string Person::getName() const{
+    return name;
+ }
+
+int Person::getAge() const{
+    return age;
+  }
+
+string Person::getOccupation() const{
+    return occupation;
+}
+
+bool Person::getLivesInIE() const{
+    return lives_in_IE;
+}
+
+/**
+ * @brief return true if our person is older than "a"
+ * 
+ * @param a 
+ * @return true 
+ * @return false 
+ */
+bool Person::isOlderThan(Person a) const{
+    if (age > a.getAge()) {
+        return true;
+    } else {
+        return false;
+    }
+    // return age > a.getAge();
+}
