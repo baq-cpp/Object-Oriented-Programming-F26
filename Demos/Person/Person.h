@@ -15,5 +15,12 @@ class Person{
     void updateAge(int new_age);
     void updateOccupation(string new_occupation);
     void moveLocation();
+
+    //accessor functions
+    string getName() const;
+    int getAge() const;
+    string getOccupation() const;
+    bool getLivesInIE() const;
+    bool isOlderThan(Person a) const;
 };
 #endif
