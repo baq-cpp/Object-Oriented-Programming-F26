@@ -8,7 +8,7 @@ class Person{
     public:
         //Constructors + Destructors
         Person();
-        Person(string name, int age, string occupation, bool lives_in_IE);
+        Person(string name, int age, string occupation, bool IE);
         // ~Person();
 
         //mutator functions
