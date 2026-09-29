@@ -22,6 +22,8 @@ int main()
     printStats(&unknown);
 
     unknown.updateName("Jane Doe");
+    unknown.updateAge(99);
+    unknown.updateOccupation("student");
     printStats(&unknown);
     return 0;
 }
