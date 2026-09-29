@@ -5,7 +5,6 @@
 using namespace std;
 
 
-
 int main()
 {
     //overloaded constructor
@@ -16,5 +15,16 @@ int main()
                                                         bob.getLivesInIE());
     //default constructor
     Person unknown = Person();
+
+    printf("Name: %s Age: %i Occu: %s Lives in IE: %i\n", unknown.getName().c_str(), 
+                                                    unknown.getAge(), 
+                                                    unknown.getOccupation().c_str(), 
+                                                    unknown.getLivesInIE());
+
+    unknown.updateName("Jane Doe");
+    printf("Name: %s Age: %i Occu: %s Lives in IE: %i\n", unknown.getName().c_str(), 
+                                                unknown.getAge(), 
+                                                unknown.getOccupation().c_str(), 
+                                                unknown.getLivesInIE());
     return 0;
 }
